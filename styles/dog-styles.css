@@ -61,38 +61,27 @@ body, html {
     text-decoration: none;
 }
 @media (min-width: 568px) {
-<<<<<<< Updated upstream
-=======
 
     .details-container{
         position: absolute; top: 25vh;
         height: 60vh;
         right: 2vw;
     }
->>>>>>> Stashed changes
     .thumbnails-list{
         flex-direction: column;
         flex-wrap: nowrap;
         order: -1;
-<<<<<<< Updated upstream
-=======
         justify-content: unset;
         max-height: 65vh;
         position: absolute; top: 20vh;
         left: 1vw;
         padding: 10px;   
->>>>>>> Stashed changes
     }
     .thumbnails-title {
         width: 20vw;
     }
     .thumbnails-item {
         max-width: 20vw;
-<<<<<<< Updated upstream
-    }
-    
-    
-=======
         border-radius: 20px; 
     }
     .logo-title{
@@ -113,5 +102,4 @@ body, html {
         left: 1vw;
         bottom: -3vw;
     }
->>>>>>> Stashed changes
 }
