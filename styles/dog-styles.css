@@ -61,17 +61,37 @@ body, html {
     text-decoration: none;
 }
 @media (min-width: 568px) {
+
+    .details-container{
+        position: absolute;
+        right: 2vw;
+    }
     .thumbnails-list{
         flex-direction: column;
         flex-wrap: nowrap;
         order: -1;
+        max-height: 40vh;
+        position: absolute;
+        left: 1vw;
+        padding: 10px;
     }
     .thumbnails-title {
         width: 20vw;
     }
     .thumbnails-item {
         max-width: 20vw;
+        border-radius: 25px;
+        background-repeat: repeat;
     }
-    
-    
+    .logo-title{
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+    }
+    .footer-title{
+        position: fixed; 
+        text-align: center;
+        bottom: 0; 
+        width: 100%; 
+    }
 }
