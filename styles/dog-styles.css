@@ -144,17 +144,24 @@ body, html {
         --thumbnails-image-width: 12vw;
         --thumbnails-image-height: 10vw;
         --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.20);
-    }    
+        --thumbnails-list-max-height: 70vh;
+        --details-image-height: var(--thumbnails-list-max-height);
+        --details-image-width: calc(var(--details-image-height)*1.6);
+    }   
     .logo-title{
         font-size: 3.5rem;
+        margin-bottom: 3vh;
     }
     .details-image{
+        max-height: var(--details-image-height);
+        max-width: var(--details-image-width);
         margin-bottom: 16vh;
         border-radius: 30px;
     }
     .details-title{
         font-size: 2rem;
-        bottom: 13vw;
+        bottom: 9vw;
+        left: -1vw;
     }
     .thumbnails-list{
         direction: rtl;
@@ -163,7 +170,6 @@ body, html {
         font-size: 1.05rem;
     }
     .footer-title{
-        margin-bottom: 2vh;
-        margin-left: 2vw;
+        margin-left: 1vw;
     }
 }
