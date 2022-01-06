@@ -32,6 +32,11 @@ body {
     padding: 0;
     padding-top: 2.5vh;
 }
+.hidden .thumbnails-list{
+    flex-direction: column;
+    max-height: 85vh;
+    align-items: center;
+}
 .thumbnails-image {
     width: var(--thumbnails-image-width);
     height: var(--thumbnails-image-height);
@@ -116,6 +121,11 @@ body, html {
         padding: 0;
         margin: 0;
     }
+    .hidden .thumbnails-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
     .thumbnails-title {
         font-size: 1rem;
     }
@@ -126,6 +136,10 @@ body, html {
     }
     .thumbnails-item+.thumbnails-item {
         margin-top: 2vh;
+    }
+    .hidden .thumbnails-item{
+        margin-right: 2vh;
+        margin-left: 6vh;
     }
     .details-image {
         width: 60vw;
@@ -177,6 +191,9 @@ body, html {
     }
     .thumbnails-list{
         direction: rtl;
+    }
+    .hidden .thumbnails-list{
+        direction: ltr;
     }
     .thumbnails-title{
         font-size: 1.05rem;

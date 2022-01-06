@@ -15,10 +15,10 @@ function setDetails(anchor) {
     console.log("anchor element  was pressed", anchor);
     let hrefValue = anchor.getAttribute("href");
     detailsImage.setAttribute("src", hrefValue);
-    anchor.parentElement.classList.add("selected");
     if(selectedItem){
         selectedItem.classList.remove("selected");
     }
+    anchor.parentElement.classList.add("selected");
     selectedItem = anchor.parentElement;
     // get element with class thumbnails-title inside the given anchor.
     let thumbnailsTitleSelector = `[href="${hrefValue}"] .thumbnails-title`;
@@ -31,4 +31,7 @@ function showDetails() {
 }
 function hideDetails() {
     mainContentEl.classList.add('hidden');
+    if(mainContentEl.classList.contains("hidden")){
+        selectedItem.classList.remove("selected");
+    }
 }
