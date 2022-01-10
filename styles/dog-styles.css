@@ -19,7 +19,6 @@ body {
     justify-content: space-between;
     margin: 0;
     background-color: yellowgreen;
-    /* align-items: center; */
 }
 .thumbnails-list {
     display: flex;
@@ -33,7 +32,7 @@ body {
     padding-top: 2.5vh;
 }
 .hidden .thumbnails-list{
-    flex-direction: column;
+    flex-direction: row;
     max-height: 85vh;
     align-items: center;
 }
@@ -60,6 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 3s cubic-bezier(0.1, 2, 0.9, 1);
 }
 .hide-button{
     position: absolute;
@@ -106,10 +106,24 @@ body {
 body, html {
     height: 100%
 }
+.is-tiny{
+    transform: scale(0.001);
+    transition: 0s;
+}
+.hidden{
+    --thumbnails-image-width: 40vw;
+    --thumbnails-image-height: 30vw;
+    --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.30);
+}
 @media (min-width: 568px){
     :root{
         --thumbnails-image-width: 12vw;
         --thumbnails-image-height: 10vw;
+        --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.30);
+    }
+    .hidden{
+        --thumbnails-image-width: 30vw;
+        --thumbnails-image-height: 20vw;
         --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.30);
     }
     .thumbnails-list {
@@ -128,6 +142,9 @@ body, html {
     }
     .thumbnails-title {
         font-size: 1rem;
+    }
+    .hidden .thumbnails-title{
+        font-size: 2rem;
     }
     .thumbnails-item {
         margin-left:0;
@@ -174,6 +191,11 @@ body, html {
         --details-image-height: var(--thumbnails-list-max-height);
         --details-image-width: calc(var(--details-image-height)*1.6);
     }   
+    .hidden{
+        --thumbnails-image-width: 30vw;
+        --thumbnails-image-height: 20vw;
+        --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.30);
+    }
     .logo-title{
         font-size: 3.5rem;
         margin-bottom: 3vh;
@@ -197,6 +219,9 @@ body, html {
     }
     .thumbnails-title{
         font-size: 1.05rem;
+    }
+    .hidden .thumbnails-title{
+        font-size: 3rem;
     }
     .footer-title{
         margin-left: 1vw;
